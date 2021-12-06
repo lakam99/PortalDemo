@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 244, 244);
+}
+
+#nav,#bottom-nav {
+    background-color: hsl(200, 20%, 25%) !important;
+    padding: unset;
+}
+
+.white {
+    color: white !important;
+}
+
+#search {
+    width: 60vw !important;
+}
+
+#logo {
+    max-height: 5vh;
+}
+
+#sidebar {
+    width: 5vw;
+    height: 94vh;
+    background-color: hsl(200deg 70% 65% / 31%) !important;
+    font-family: 'Readex Pro', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+#sidebar > a {
+    width: fit-content;
+    /* max-width: 100%; */
+    text-align: center;
+    /* padding: unset !important; */
+    padding-left: 0.7vw !important;
+    /* overflow: hidden; */
+}
+
+.d-block:not(.active):hover {
+    background-color: hsl(200, 70%, 65%) !important;
+}
+
+a.d-block {
+    padding-left: 1vw !important;
+}
+
+.active {
+    background-color: rgb(255, 244, 244) !important;
+}
+
+#bottom-nav {
+    min-height: 3vh !important;
+}
+
+#container {
+    position: fixed;
+    top: 5vh;
+    left: 6vw;
+    width: 100vw;
+    height: 90vh;
+    padding-right: 7vw;
+}
+
+#results > div {
+    display: none;
+}
+
+#results {
+    padding: 0px 49vw 0px 0vw !important;
+}
+
+.card-body {
+    position: relative !important;
+}
+
+.card-body > a.btn {
+    position: absolute !important;
+    bottom: 1vh !important;
+}
+
+.card-text {
+    margin-bottom: 5vh !important;
+}
+
+#management-tools {
+    margin-top: 7.4vh !important;
+    padding: 0px 48vw 0px 0vw !important;
+}
+
+#newsletter {
+    /* text-align: center; */
+    margin-left: 0vw;
+    width: 93vw;
+    /* height: 80vh; */
+    padding-bottom: 30vh;
+    background-color: rgb(246 250 255);
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+
+#dropdown-label {
+    position: absolute;
+    right: 1vw;
+    top: 0.55vh;
+    font-size: 1.2rem;
+    left: 88vw;
+    /* padding-left: 0.7vw; */
+    background-color: rgb(139 108 130 / 11%);
+    width: 11%;
+    margin-top: 0.2vh;
+    height: 69%;
+    text-align: center;
+    border-color: #ffe4c430 !important;
+}
+
+#dropdown-label:hover {
+    border-color: #ffffffa4 !important;
+    cursor: pointer;
+}
+
+#new-btn {
+    color: hsl(200deg 60% 84%) !important;
+}
