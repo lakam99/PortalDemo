@@ -102,16 +102,83 @@
                 </div> 
             </div>
             <div id='management-tools' style="display: none;">
-                <div class="container" id='management'>
-                </div>
+                <p>
+                    <h4>I'm looking for&nbsp;.&nbsp;.&nbsp;.</h4> 
+                    <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='dontneedhelp'>
+                        <option value='5' selected>&nbsp;</option>
+                        <option value='6'>IMEPs</option>
+                        <option value='7'>Microsoft Teams</option>
+                    </select>
+                </p>
+                <div id="management-dashboard" name="5" class="border border-4 rounded">
                     <div class="row">
-                        
+                        <div class="col-sm-4">
+                            <div class="accordion" id="graph1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id='graph1-h'>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph1-b" data-bs-parent="#graph1">
+                                            Assigned Tickets by Analyst
+                                        </button>
+                                    </h2>
+                                    <div id="graph1-b" class="accordion-collapse collapse show" data-bs-parent="#graph1">
+                                        <div class="accordion-body">
+                                            <img src="https://s3.amazonaws.com/cdn.graphpad.com/faq/1137/images/Grouped%20animals%20(Annotations).png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="accordion" id="graph2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id='graph2-h'>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph2-b" data-bs-parent="#graph2">
+                                            Team Members
+                                        </button>
+                                    </h2>
+                                    <div id="graph2-b" class="accordion-collapse collapse show" data-bs-parent="#graph2">
+                                        <div class="accordion-body">
+                                            <table class="table">
+                                                <thead class="thead-dark">
+                                                  <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">First</th>
+                                                    <th scope="col">Last</th>
+                                                    <th scope="col">No. Tickets Assigned</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>5</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>14</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>36</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-group">
-                    
-
+                <div class="container" name="6" id='imeps'>
                 </div>
+                <div class="container" name="7" id='teams'></div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
@@ -126,26 +193,33 @@
             }
 
             function hide_all() {
-                ['0','1','2','3','4'].map((i)=>{
+                ['0','1','2','3','4','5','6','7'].map((i)=>{
                     hide(i);
                 });
             }
 
-            $('#help').on('change',(e)=>{
+            let f = (e)=>{
                 hide_all();
-                let val = $('#help').val();
+                let val = $(`#${e.currentTarget.id}`).val();
                 if (val != ' ') {
                     show(Number.parseInt(val));
                 }
-            });
+            }
+
+            $('#help').on('change', f);
+            $('#dontneedhelp').on('change', f);
 
             $('#general').on('click', (e)=>{
                 $('#management-tools').css('display', 'none');
                 $('#home').css('display', 'block');
+                hide_all();
+                show(0);
             });
             $('#manage').on('click', (e)=>{
                 $('#home').css('display', 'none');
                 $('#management-tools').css('display', 'block');
+                hide_all();
+                show(5);
             });
             
         </script>

@@ -61,7 +61,7 @@
         {
             "img":"./assets/chair.png",
             "title":"Ergonomic Accomodation / Office Equipment",
-            "text":"If you have need of non-IT office equipment such as ergonomic equipment, file a service request here. Please note that ergonomic equipment requires you to provide documents stating its necessity.",
+            "text":"If you have need of office equipment, file a service request here. Please note that ergonomic equipment requires you to provide documents stating its necessity.",
             "type":"aro"
         }
     ],
@@ -79,7 +79,7 @@
             "type":"aro"
         }
     ],
-    "management": [
+    "imeps": [
         {
             "img":"./assets/intake.png",
             "title":"IMEP Intake",
@@ -91,8 +91,11 @@
             "title":"IMEP Exit",
             "text":"File an IMEP Exit Form.",
             "type":"aro"
-        },
-        {
+        }
+    ],
+    "teams":
+        [
+            {
             "img":"./assets/teams.png",
             "title":"New 'Microsoft Teams' Team",
             "text":"File a request for a new 'Microsoft Teams' Team to be created.",

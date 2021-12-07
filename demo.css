@@ -74,6 +74,7 @@ a.d-block {
 
 .card-body {
     position: relative;
+    height: 100%;
 }
 
 .card-body > a.btn {
@@ -85,9 +86,10 @@ a.d-block {
     margin-bottom: 5vh !important;
 }
 
-#management-tools {
-    margin-top: 7.4vh !important;
-    padding: 0px 48vw 0px 0vw !important;
+#teams,#imeps {
+    margin-top: 0.4vh !important;
+    padding: 0px 27vw 0px 0vw !important;
+    margin-left: 0;
 }
 
 #newsletter {
@@ -135,3 +137,61 @@ a.d-block {
     /* margin-top: 7vh; */
     /* padding-bottom: 0vh; */
 }
+
+.card-body-container {
+    height: 100%;
+}
+
+.card-group > .card {
+    /* max-width: 15vw; */
+    /* text-align: center; */
+    /* align-content: center; */
+    /* align-items: center; */
+    max-width: 21vw;
+}
+
+#management-dashboard {
+    /* text-align: center; */
+    margin-left: 0vw;
+    width: 93vw;
+    height: 68vh;
+    max-height: 68vh;
+    padding-bottom: 30vh;
+    background-color: rgb(246 250 255);
+    padding-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    /* overflow: auto; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.accordion-body > img {
+    max-width: 100%;
+}
+
+.card-img-top {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+}
+
+/* width */
+#management-dashboard::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #management-dashboard::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+  
+  /* Handle */
+  #management-dashboard::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+  }
+  
+  /* Handle on hover */
+  #management-dashboard::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+  }
