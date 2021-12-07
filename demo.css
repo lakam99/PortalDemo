@@ -14,11 +14,13 @@ body {
 }
 
 #search {
-    width: 60vw !important;
+    width: 34vw !important;
 }
 
 #logo {
     max-height: 5vh;
+    padding-bottom: 3px;
+    margin-left: -0.5vw;
 }
 
 #sidebar {
@@ -108,10 +110,10 @@ a.d-block {
     right: 1vw;
     top: 0.55vh;
     font-size: 1.2rem;
-    left: 88vw;
+    left: 89vw;
     /* padding-left: 0.7vw; */
-    background-color: rgb(139 108 130 / 11%);
-    width: 11%;
+    background-color: rgb(51 68 77);
+    width: 10%;
     margin-top: 0.2vh;
     height: 69%;
     text-align: center;
