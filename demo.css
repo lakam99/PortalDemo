@@ -73,7 +73,7 @@ a.d-block {
 }
 
 .card-body {
-    position: relative !important;
+    position: relative;
 }
 
 .card-body > a.btn {
@@ -123,4 +123,15 @@ a.d-block {
 
 #new-btn {
     color: hsl(200deg 60% 84%) !important;
+}
+
+.mng-row-1 {
+    padding: 2vw;
+    bottom: 1vw;
+}
+
+.card-lower-half {
+    /* position: relative; */
+    /* margin-top: 7vh; */
+    /* padding-bottom: 0vh; */
 }

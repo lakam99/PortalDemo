@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <testcomponent name='Arkam'></testcomponent>
+    </div>
+    <script type="text/javascript">
+        Vue.component('testcomponent', {
+            props: ['name'],
+            template: `<h1>Hello {{ name }}</h1>`
+        });
+        new Vue({ el: '#app' });
+    </script>
+</body>
+
+</html>

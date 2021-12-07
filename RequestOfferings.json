@@ -1,0 +1,102 @@
+{
+    "outlook": [
+        {
+            "img": "./assets/email-lock.png",
+            "title": "How to Send/Receive Encrypted Emails",
+            "text": "In this knowledge base article, we go over the steps to work with encrpyted emails.",
+            "type": "kb"
+        },
+        {
+            "img": "./assets/email-addons.png",
+            "title": "Email Addons",
+            "text": "Email add-ons not functioning as they should? File a service request for assistance.",
+            "type": "aro"
+        },
+        {
+            "img": "./assets/outlook.png",
+            "title": "Other Issues",
+            "text": "Emails not loading? Outlook client freezing? For all other Outlook issues, file a service request for assistance.",
+            "type": "aro"
+        }
+    ],
+    "citrix": [
+        {
+            "img":"./assets/bad-connection.png",
+            "title":"Report Connectivity Issues",
+            "text":"If you are having difficulty with Citrix connection speed / glitches, use this form to file a service request for assistance",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/pin.png",
+            "title":"Reset Citrix PIN",
+            "text":"Forgot your Citrix pin? File a service request to get it reset.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/beta.png",
+            "title":"Request Access to Beta Version",
+            "text":"Want to try out currently experimental Citrix builds? Submit a request here.",
+            "type":"aro"
+        }
+    ],
+    "equipment": [
+        {
+            "img":"./assets/voicemail.png",
+            "title":"How to Access iPhone Voicemail",
+            "text":"In this knowledge base article, we go over the steps to access your vociemail on your company issued iPhone.",
+            "type":"kb"
+        },
+        {
+            "img":"./assets/equipment.png",
+            "title":"Request IT Equipment",
+            "text":"Need an office issued iPhone, tablet, or computer monitor? File a request to receive one here.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/broken.webp",
+            "title":"Report Broken Equipment",
+            "text":"Accidents happen. Report any broken IT equipment in your possession here.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/chair.png",
+            "title":"Ergonomic Accomodation / Office Equipment",
+            "text":"If you have need of non-IT office equipment such as ergonomic equipment, file a service request here. Please note that ergonomic equipment requires you to provide documents stating its necessity.",
+            "type":"aro"
+        }
+    ],
+    "other": [
+        {
+            "img":"./assets/srq.png",
+            "title":"Generic Service Request",
+            "text":"File a service request with Support Central.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/incident.png",
+            "title":"Generic Incident Request",
+            "text":"File an incident with Support Central.",
+            "type":"aro"
+        }
+    ],
+    "management": [
+        {
+            "img":"./assets/intake.png",
+            "title":"IMEP Intake",
+            "text":"File an IMEP Intake Form. The letter of offer must be signed by all required parties.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/exit.png",
+            "title":"IMEP Exit",
+            "text":"File an IMEP Exit Form.",
+            "type":"aro"
+        },
+        {
+            "img":"./assets/teams.png",
+            "title":"New 'Microsoft Teams' Team",
+            "text":"File a request for a new 'Microsoft Teams' Team to be created.",
+            "type":"aro"
+        }
+    ]
+}
