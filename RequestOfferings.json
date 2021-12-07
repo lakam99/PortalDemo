@@ -53,7 +53,7 @@
             "type":"aro"
         },
         {
-            "img":"./assets/broken.webp",
+            "img":"./assets/broken.png",
             "title":"Report Broken Equipment",
             "text":"Accidents happen. Report any broken IT equipment in your possession here.",
             "type":"aro"

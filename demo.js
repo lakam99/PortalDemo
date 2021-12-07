@@ -1,33 +1,32 @@
-const RequestOfferingCard = Vue.component('requestoffering',{
-    props:{
-        img: {required: true, type: String},
-        title: {required: true, type: String},
-        text: {required: true, type: String},
-        btn_type: {required: true, type: String}
-    },
-    template: `
-        <div class='card'>
-            <img src='{{ img }}' class='card-img-top' alt='{{ title }}'>
+function create_aro_card(obj) {
+    return `
+    <div class='card'>
+            <img src='${obj.img}' class='card-img-top' alt='${obj.title}'>
             <div class='card-body-container'>
                 <div class='card-body'>
-                    <h5 class='card-title'>{{ title }}</h5>
-                    <p class='card-text'>{{ text }}</p>
-                    <a href="#" class='btn btn-primary'>{{ btn_type == 'aro' ? 'Start request':'Start reading' }}</a>
+                    <h5 class='card-title'>${obj.title}</h5>
+                    <p class='card-text'>${obj.text}</p>
+                    <a href="#" class='btn btn-primary'>${ obj.type == 'aro' ? 'Start request':'Start reading' }</a>
                 </div>
             </div>
         </div>
-    `
-});
-
-async function get_data() {
-    return await new Promise((resolve,reject)=>{fetch("./RequestOfferings.json").then((r)=>{
-        resolve(r.json());
-       })});
+    `;
 }
 
-const app = new Vue({
-    el:'#outlook',
-    async data() {
-        return {requestOfferings: get_data()}
-    }
+function create_aro_group(obj) {
+    var r = `<div class='card-group'>`;
+    obj.forEach((aro)=>{
+        r += create_aro_card(aro);
+    });
+    r += `</div>`;
+    return r;
+}
+
+fetch("./RequestOfferings.json").then((r)=>{
+    r.json().then((pages)=>{
+        Object.keys(pages).forEach((page)=>{
+            $(`#${page}`).append(create_aro_group(pages[page]));
+        });
+    });
 });
+

@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "attach",
+            "name": "Attach to Microsoft Edge and open the Edge DevTools",
+            "url": "http://192.168.2.34/",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "http://192.168.2.34/" // Provide your project's url to finish configuring
+        }
+    ]
+}
