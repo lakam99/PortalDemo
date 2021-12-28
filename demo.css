@@ -7,6 +7,7 @@ body {
 #nav,#bottom-nav {
     background-color: hsl(200, 20%, 25%) !important;
     padding: unset;
+    box-shadow: inset 2px 1px 20px 0px #020202;
 }
 
 .white {
@@ -19,21 +20,25 @@ body {
 
 #logo {
     max-height: 5vh;
+    min-height: 5vh;
+    max-width: 5vw;
     padding-bottom: 3px;
     margin-left: -0.5vw;
 }
 
 #sidebar {
     width: 5vw;
-    height: 94vh;
-    background-color: hsl(200deg 70% 65% / 31%) !important;
+    height: 92vh;
+    background-color: hsl(200deg 100% 89% / 46%) !important;
     font-family: 'Readex Pro', sans-serif;
     text-align: center;
     overflow: hidden;
+    /* -webkit-box-shadow: 2px 8px 21px -4px #000000; */
+    box-shadow: -9px -20px 21px -4px #000000;
 }
 
 #sidebar > a {
-    width: fit-content;
+    width: 100%;
     /* max-width: 100%; */
     text-align: center;
     /* padding: unset !important; */
@@ -42,7 +47,7 @@ body {
 }
 
 .d-block:not(.active):hover {
-    background-color: hsl(200, 70%, 65%) !important;
+    background-color: hsl(200deg 73% 76% / 93%) !important;
 }
 
 a.d-block {
@@ -51,6 +56,8 @@ a.d-block {
 
 .active {
     background-color: rgb(255, 244, 244) !important;
+    /* -webkit-box-shadow: 2px 8px 21px -4px #000000; */
+    box-shadow: unset;
 }
 
 #bottom-nav {
@@ -196,4 +203,12 @@ a.d-block {
   /* Handle on hover */
   #management-dashboard::-webkit-scrollbar-thumb:hover {
     background: #b2b2b2;
+  }
+
+  .requests-header {
+    padding-left: 1vw;
+  }
+
+  .requests-body {
+      position: relative;
   }

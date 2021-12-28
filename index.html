@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portal Demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+        <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.5.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,15 +21,15 @@
                     <img id='logo' src='https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Natural_Sciences_and_Engineering_Research_Council_Logo.svg/1200px-Natural_Sciences_and_Engineering_Research_Council_Logo.svg.png' alt='NSERC-CRSNG'>
                     Service Manager 2019 Portal</a>
                 <div class="navbar-nav">
-                    <span class="float-right" style="margin-right: 13vw;">
-                        <input id='search' class='nav-item' type="text" placeholder="Search...">
+                    <span class="float-right" style="margin-right: 46vw;">
+                        <input id='search' class='nav-item rounded' type="text" placeholder="Search...">
                     </span>
-                    <label for="user-dropdown" class='border border-2 rounded' id="dropdown-label">
+                    <label for="user-dropdown" class='border border-2 rounded' id="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false" >
                         <a class="white text-decoration-none" href="#" style="font-size: 1rem;">Mazrui,Arkam</a>
                         <i class="fas fa-bars white"></i>
                     </label>
                     <span class="nav-item dropdown" id="user-dropdown" name="user-dropdown">
-                        <a class="dropdown-toggle white" href="#" id="navbarDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false" hidden>
+                        <a class="dropdown-toggle white" href="#" id="navbarDrop" role="button"hidden>
                             Mazrui,Arkam
                         </a>
                     </span>
@@ -39,11 +40,11 @@
             </div>
         </nav>
         <div class="d-flex flex-column flex-shrink-0 bg-light" id='sidebar'>
-            <a href="#" class="active d-block p-5 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+            <a href="#" id='tg-home' class="active d-block p-5 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                 <i class="fas fa-home" style="font-size: 50px;"></i>
                 &nbsp;Home
             </a>
-            <a href="#" class="d-block p-5 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+            <a href="#" id='tg-my-requests' class="d-block p-5 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                 <i class="fas fa-comment" style="font-size: 45px;"></i>
                 &nbsp;My Requests
             </a>
@@ -63,122 +64,139 @@
             </span>
         </nav>
         <div id="container">
-            <h1 class="text-center display-1"> Service Manager Portal </h1>
-            <div style="position: relative;"> 
-                <span style="float:right">
-                    <a href="#" id='general'>Home</a>&nbsp;|&nbsp; <a href='#' id='manage'>Management Forms</a>
-                </span>
-            </div>
-            <div id='home' style="display: block;">
-                <p>
-                    <h4>I need help with&nbsp;.&nbsp;.&nbsp;.</h4> 
-                    <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='help'>
-                        <option value=0 selected>&nbsp;</option>
-                        <option value=1>Outlook</option>
-                        <option value=2>Citrix</option>
-                        <option value=3>iPhone / Tablet / Office Equipment</option>
-                        <option value=4 >Other</option>
-                    </select>
-                </p>
-                <div id='results'>
-                    <div name='0' id='newsletter' class='border border-4 rounded' style="display: block;">
-                        <h1 class="display-6 text-center">Support Desk Newsletter</h1>
-                        <div class="rounded-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non sollicitudin eros. Fusce in aliquam justo. Vestibulum vitae tincidunt eros. Quisque tincidunt elit eget tempus blandit. Duis quis erat augue. Phasellus ac nunc nec sem sodales faucibus. Nullam lacinia, lacus fringilla congue porta, risus ligula laoreet arcu, eu malesuada diam justo at sem.
-                            <p></p>
-                            Integer posuere quis odio sed faucibus. Pellentesque in facilisis orci. Suspendisse leo libero, lobortis ut velit vitae, venenatis lacinia arcu. Ut velit velit, efficitur non pharetra a, elementum eget nisl. Sed consectetur massa tortor, eget pulvinar nibh sollicitudin a. Donec viverra sapien quis lacus lacinia, ut finibus diam euismod. Pellentesque at bibendum erat. Vivamus tristique molestie orci quis rhoncus. Praesent augue turpis, tincidunt id metus a, mollis cursus dolor. Mauris tristique mauris blandit egestas volutpat. Ut eros sapien, interdum porta semper vitae, porttitor ut tellus. In aliquet elit mollis, viverra orci vel, pretium eros. Aliquam at enim feugiat, fermentum ante venenatis, pulvinar enim. Maecenas eget ultrices quam. Etiam consectetur ligula eget ipsum sollicitudin pretium.
-                            <p></p>
-                            Vivamus iaculis scelerisque felis, id feugiat massa dictum a. Quisque tempus mi ex, eget maximus leo molestie non. Nulla vitae tortor orci. Praesent non purus id eros tincidunt hendrerit. In pretium odio risus, ultrices fermentum ipsum aliquam placerat. Duis sit amet enim quis nulla congue sodales non nec lorem. Phasellus molestie sem non mi convallis placerat. In vitae eleifend ex.
+            <div id="home-container" style="display: block;">
+                <h1 class="text-center display-1"> Service Manager Portal </h1>
+                <div style="position: relative;"> 
+                    <span style="float:right">
+                        <a href="#" id='general'>Home</a>&nbsp;|&nbsp; <a href='#' id='manage'>Management Forms</a>
+                    </span>
+                </div>
+                <div id='home' style="display: block;">
+                    <p>
+                        <h4>I need help with&nbsp;.&nbsp;.&nbsp;.</h4> 
+                        <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='help'>
+                            <option value=0 selected>&nbsp;</option>
+                            <option value=1>Outlook</option>
+                            <option value=2>Citrix</option>
+                            <option value=3>iPhone / Tablet / Office Equipment</option>
+                            <option value=4 >Other</option>
+                        </select>
+                    </p>
+                    <div id='results'>
+                        <div name='0' id='newsletter' class='border border-4 rounded' style="display: block;">
+                            <h1 class="display-6 text-center">Support Desk Newsletter</h1>
+                            <div class="rounded-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non sollicitudin eros. Fusce in aliquam justo. Vestibulum vitae tincidunt eros. Quisque tincidunt elit eget tempus blandit. Duis quis erat augue. Phasellus ac nunc nec sem sodales faucibus. Nullam lacinia, lacus fringilla congue porta, risus ligula laoreet arcu, eu malesuada diam justo at sem.
+                                <p></p>
+                                Integer posuere quis odio sed faucibus. Pellentesque in facilisis orci. Suspendisse leo libero, lobortis ut velit vitae, venenatis lacinia arcu. Ut velit velit, efficitur non pharetra a, elementum eget nisl. Sed consectetur massa tortor, eget pulvinar nibh sollicitudin a. Donec viverra sapien quis lacus lacinia, ut finibus diam euismod. Pellentesque at bibendum erat. Vivamus tristique molestie orci quis rhoncus. Praesent augue turpis, tincidunt id metus a, mollis cursus dolor. Mauris tristique mauris blandit egestas volutpat. Ut eros sapien, interdum porta semper vitae, porttitor ut tellus. In aliquet elit mollis, viverra orci vel, pretium eros. Aliquam at enim feugiat, fermentum ante venenatis, pulvinar enim. Maecenas eget ultrices quam. Etiam consectetur ligula eget ipsum sollicitudin pretium.
+                                <p></p>
+                                Vivamus iaculis scelerisque felis, id feugiat massa dictum a. Quisque tempus mi ex, eget maximus leo molestie non. Nulla vitae tortor orci. Praesent non purus id eros tincidunt hendrerit. In pretium odio risus, ultrices fermentum ipsum aliquam placerat. Duis sit amet enim quis nulla congue sodales non nec lorem. Phasellus molestie sem non mi convallis placerat. In vitae eleifend ex.
+                            </div>
                         </div>
-                    </div>
-                    <div name='1' id='outlook'>
-                    </div>
-                    <div name='2' id='citrix'>
-                    </div>                    
-                    <div name='3' id='equipment'>
-                    </div>
-                    <div name='4' id='other'>
-                    </div>
-                </div> 
-            </div>
-            <div id='management-tools' style="display: none;">
-                <p>
-                    <h4>I'm looking for&nbsp;.&nbsp;.&nbsp;.</h4> 
-                    <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='dontneedhelp'>
-                        <option value='5' selected>&nbsp;</option>
-                        <option value='6'>IMEPs</option>
-                        <option value='7'>Microsoft Teams</option>
-                    </select>
-                </p>
-                <div id="management-dashboard" name="5" class="border border-4 rounded">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="accordion" id="graph1">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id='graph1-h'>
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph1-b" data-bs-parent="#graph1">
-                                            Assigned Tickets by Analyst
-                                        </button>
-                                    </h2>
-                                    <div id="graph1-b" class="accordion-collapse collapse show" data-bs-parent="#graph1">
-                                        <div class="accordion-body">
-                                            <img src="https://s3.amazonaws.com/cdn.graphpad.com/faq/1137/images/Grouped%20animals%20(Annotations).png">
+                        <div name='1' id='outlook'>
+                        </div>
+                        <div name='2' id='citrix'>
+                        </div>                    
+                        <div name='3' id='equipment'>
+                        </div>
+                        <div name='4' id='other'>
+                        </div>
+                    </div> 
+                </div>
+                <div id='management-tools' style="display: none;">
+                    <p>
+                        <h4>I'm looking for&nbsp;.&nbsp;.&nbsp;.</h4> 
+                        <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='dontneedhelp'>
+                            <option value='5' selected>&nbsp;</option>
+                            <option value='6'>IMEPs</option>
+                            <option value='7'>Microsoft Teams</option>
+                        </select>
+                    </p>
+                    <div id="management-dashboard" name="5" class="border border-4 rounded">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="accordion" id="graph1">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id='graph1-h'>
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph1-b" data-bs-parent="#graph1">
+                                                Assigned Tickets by Analyst
+                                            </button>
+                                        </h2>
+                                        <div id="graph1-b" class="accordion-collapse collapse show" data-bs-parent="#graph1">
+                                            <div class="accordion-body">
+                                                <img src="./assets/graph1.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="accordion" id="graph2">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id='graph2-h'>
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph2-b" data-bs-parent="#graph2">
+                                                Team Members
+                                            </button>
+                                        </h2>
+                                        <div id="graph2-b" class="accordion-collapse collapse show" data-bs-parent="#graph2">
+                                            <div class="accordion-body">
+                                                <table class="table">
+                                                    <thead class="thead-dark">
+                                                      <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">No. Tickets Assigned</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>5</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>14</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>36</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-8">
-                            <div class="accordion" id="graph2">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id='graph2-h'>
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graph2-b" data-bs-parent="#graph2">
-                                            Team Members
-                                        </button>
-                                    </h2>
-                                    <div id="graph2-b" class="accordion-collapse collapse show" data-bs-parent="#graph2">
-                                        <div class="accordion-body">
-                                            <table class="table">
-                                                <thead class="thead-dark">
-                                                  <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">No. Tickets Assigned</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>5</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>14</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>36</td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
-                                              
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="container" name="6" id='imeps'>
+                    </div>
+                    <div class="container" name="7" id='teams'></div>
+                </div>
+            </div>
+            <div id="my-requests-container" style="display: none;">
+                <div id="my-requests">
+                    <span class="requests-header border-bottom p-1">
+                        <h2 class="p-1"><strong>My Requests</strong></h2>
+                        <hr>
+                    </span>
+                    <div id='requests-body'>
+                        <div class="requests-body">
+                            <span class="float-left">
+                                <h5><strong><a href="#">ACTIVE</a>&nbsp;&nbsp;<a href="#">CLOSED</a></strong></h5>
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="container" name="6" id='imeps'>
-                </div>
-                <div class="container" name="7" id='teams'></div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
@@ -220,6 +238,34 @@
                 $('#management-tools').css('display', 'block');
                 hide_all();
                 show(5);
+            });
+            $('#tg-home').on('click', (e)=>{
+                if ($('#tg-home.active').length) {return}
+                $('#tg-home').addClass('active');
+                $('#tg-my-requests').removeClass('active');
+                $('#home-container').css('display', 'block');
+                $('#my-requests-container').css('display', 'none');
+            });
+            $('#tg-my-requests').on('click', (e)=>{
+                if ($('#tg-my-requests.active').length) {return}
+                $('#tg-my-requests').addClass('active');
+                $('#tg-home').removeClass('active');
+                $('#home-container').css('display', 'none');
+                $('#my-requests-container').css('display', 'block');
+            });
+            function *getLogo() {
+                var src = ['https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Natural_Sciences_and_Engineering_Research_Council_Logo.svg/1200px-Natural_Sciences_and_Engineering_Research_Council_Logo.svg.png',
+                           'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Social_Sciences_and_Humanities_Research_Council_Logo.svg/1280px-Social_Sciences_and_Humanities_Research_Council_Logo.svg.png',
+                           'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Government_of_Canada_logo.svg/1200px-Government_of_Canada_logo.svg.png'];
+                var i = 1;
+                while (true) {
+                    i = i < 3 ? i:0;
+                    yield src[i++];    
+                }
+            }
+            var logo = getLogo();
+            $("#logo").on('click', (e)=>{
+                $('#logo').attr('src', logo.next().value);
             });
             
         </script>
