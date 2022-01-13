@@ -3,12 +3,12 @@
         {
             "img": "./assets/email-lock.png",
             "title": "How to Send/Receive Encrypted Emails",
-            "text": "In this knowledge base article, we go over the steps to work with encrpyted emails.",
+            "text": "In this knowledge base article, we go over the steps to work with encrypted emails.",
             "type": "kb"
         },
         {
             "img": "./assets/email-addons.png",
-            "title": "Email Addons",
+            "title": "Email Add-ons",
             "text": "Email add-ons not functioning as they should? File a service request for assistance.",
             "type": "aro"
         },
@@ -23,7 +23,7 @@
         {
             "img":"./assets/bad-connection.png",
             "title":"Report Connectivity Issues",
-            "text":"If you are having difficulty with Citrix connection speed / glitches, use this form to file a service request for assistance",
+            "text":"If you are having difficulty with Citrix connection speed / glitches, use this form to file a service request for assistance.",
             "type":"aro"
         },
         {
@@ -60,7 +60,7 @@
         },
         {
             "img":"./assets/chair.png",
-            "title":"Ergonomic Accomodation / Office Equipment",
+            "title":"Ergonomic Accomodation",
             "text":"If you have need of office equipment, file a service request here. Please note that ergonomic equipment requires you to provide documents stating its necessity.",
             "type":"aro"
         }

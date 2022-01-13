@@ -1,0 +1,239 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 244, 244);
+}
+
+#navbarNavDropdown {
+    flex-direction: row-reverse;
+}
+
+#main {
+    height: 62%;
+    margin-left: 7% !important;
+    margin-right: 1% !important;
+}
+
+#aro-dropdown {
+    padding-left: 7%;
+    padding-right: 1%;
+}
+
+#sidebar {
+    flex-direction: column;
+    width: 6%;
+    height: 100%;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#nav, #bottom-nav {
+    background-color: hsl(200, 20%, 25%) !important;
+    padding: unset;
+    box-shadow: inset 2px 1px 20px 0px #020202;
+}
+
+span.navbar-toggler-icon {
+    filter: invert(100%);
+}
+
+a > #new-btn {
+    color: white;
+    padding-left: 0.5vw !important;
+    padding-right: 0.2vw !important;
+}
+
+#new-btn {
+    color: hsl(200deg 60% 84%) !important;
+}
+
+#bottom-nav {
+    min-height: 3vh !important;
+}
+
+.active {
+    background-color: rgb(255, 244, 244) !important;
+    /* -webkit-box-shadow: 2px 8px 21px -4px #000000; */
+    box-shadow: unset;
+}
+
+.d-block:not(.active):hover {
+    background-color: hsl(200deg 73% 76% / 93%) !important;
+}
+
+#sidebar > .container > a.d-block {
+    padding-left: 15% !important;
+    padding-right: unset !important;
+    width: inherit;
+}
+
+p.for-show {
+    margin-bottom: 0rem !important;
+    text-align: center;
+}
+
+#content {
+    height: 100%;
+}
+
+div.border.border-4.rounded {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: rgb(246 250 255);
+    padding-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.accordion-button.type-1 {
+    color: #053c8d !important;
+    background-color: #ffb2b2 !important;
+}
+
+.accordion-button.type-2 {
+    color: #2c2c2c !important;
+    background-color: #e5ff85 !important;
+}
+
+.accordion-button.type-3 {
+    color: #3a3a3a !important;
+    background-color: #5bff4d !important;
+}
+
+.col-sm-4 {
+    margin-bottom: 3vh !important;
+}
+
+.my-card {
+    height: inherit;
+    border-radius: 0.3vw;
+    background-color: #ffffff69;
+    margin-right: 0.3vw;
+    transition: 0.3s;
+}
+
+.my-card:hover {
+    background-color: white;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.my-card-body {
+    display: flex;
+    width: 21vw;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.my-card-body > img {
+    height: 36vh;
+    width: 100%;
+    padding: 1vh;
+}
+
+.my-card-text {
+    padding-left: 00.5vw;
+}
+
+.my-card-text-body {
+    max-height: 6.9vh;
+    overflow-y: auto;
+}
+
+.aro-btn {
+    margin-left: 26%;
+    margin-top: auto;
+    margin-bottom: 1vh;
+}
+
+.my-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 56.8vh;
+    margin-left: 0.1vw;
+    margin-top: 1vh;
+}
+
+@media (max-width: 800px) {
+    .my-flex {
+        flex-direction: column;
+    }
+    .my-card-body {
+        width: 100%;
+        align-items: center;
+    }
+
+    .my-card-body > img {
+        width: 50%;
+    }
+
+    .aro-btn {
+        width: 150%;
+    }
+}
+
+@media (max-width: 1260px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+.ark-sm-3 {
+    height: inherit;
+}
+
+.card-title {
+    text-align: center;
+}
+
+/* width */
+#content > div::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #content > div::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+  
+  /* Handle */
+  #content > div::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+  }
+  
+  /* Handle on hover */
+  #content > div::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+  }
+
+/* - - -- - - - */
+
+.my-card-text-body::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .my-card-text-body::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+  
+  /* Handle */
+  .my-card-text-body::-webkit-scrollbar-thumb {
+    background: #e1e1e19e;
+  }
+  
+  /* Handle on hover */
+  .my-card-text-body::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+  }
