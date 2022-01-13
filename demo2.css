@@ -197,6 +197,15 @@ div.border.border-4.rounded {
     text-align: center;
 }
 
+.update-icon {
+    height: 3vh;
+    margin-right: auto;
+}
+
+.timestamp {
+    font-size: x-small;
+}
+
 /* width */
 #content > div::-webkit-scrollbar {
     width: 10px;
