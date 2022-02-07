@@ -197,13 +197,72 @@ div.border.border-4.rounded {
     text-align: center;
 }
 
-.update-icon {
+.update-icon,.edit-img {
     height: 3vh;
     margin-right: auto;
 }
 
 .timestamp {
     font-size: x-small;
+}
+
+.edit-btn {
+    flex-grow: 1;
+    height: fit-content;
+    width: 2%;
+    margin-top: 1vh;
+}
+
+#item-x {
+    height: 100%;
+}
+
+#item-x > .accordion-item {
+    height: inherit;
+    background-color: #f6faff;
+    transition: 0.3s;
+    opacity: 0.4;
+}
+
+#item-x > .accordion-item:hover {
+    background-color: #a2c8ee;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.display-7 {
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.5rem;
+}
+
+.modify-title {
+    border: unset !important;
+    outline: 0 !important;
+    background-color: inherit !important;
+    border-bottom: 1px solid black !important;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.modify-title:focus {
+    box-shadow: unset;
+}
+
+.garbage {
+    background: url('./assets/trash.png') right no-repeat;
+    height: 3vh;
+    background-size: contain;
+    transition: 0.2s;
+}
+
+.garbage:hover {
+    background-image: url('./assets/trash-open.png');
+}
+
+.disabled {
+    pointer-events: unset !important;
+    cursor: not-allowed;
 }
 
 /* width */
@@ -244,5 +303,26 @@ div.border.border-4.rounded {
   
   /* Handle on hover */
   .my-card-text-body::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b2;
+  }
+
+  /* - - -- - - - */
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+textarea::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+  
+  /* Handle */
+textarea::-webkit-scrollbar-thumb {
+    background: #e1e1e19e;
+  }
+  
+  /* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
     background: #b2b2b2;
   }

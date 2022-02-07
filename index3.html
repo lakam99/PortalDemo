@@ -70,93 +70,21 @@
             <h4>I need help with&nbsp;.&nbsp;.&nbsp;.</h4> 
             <select class="form-select form-select-lg mb-3" name='ex' title='ex' id='help'>
                 <option value=0 selected>&nbsp;</option>
+                <option value=4 >IMEPs</option>
                 <option value=5 >Microsoft Teams</option>
             </select>
         </div>
         <div id='main'>
             <div id="content">
               <div id='newsletter' name='0' class="border border-4 rounded" style="display: block;">
-                <h1 class="display-6 text-center">Support Desk Updates</h1>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="accordion" id='item-1'>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id='item1-h'>
-                          <button class="accordion-button type-1" type="button" data-bs-toggle="collapse" data-bs-target="#item1-b" data-bs-parent="#item1">
-                            <img class="update-icon" src="./assets/warn.png">
-                            Phoenix / MyGCHR
-                          </button>
-                        </h2>
-                        <div id="item1-b" class="accordion-collapse collapse show" data-bs-parent="#item1">
-                          <div class="accordion-body">
-                              <p>We are currently aware of an issue with MyGCHR where users are unable to access Phoenix tools.</p>
-                              <p class="timestamp"> Posted November 12th, 2021 </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="accordion" id='item-2'>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id='item2-h'>
-                          <button class="accordion-button type-1" type="button" data-bs-toggle="collapse" data-bs-target="#item2-b" data-bs-parent="#item2">
-                            <img class="update-icon" src="./assets/warn.png">
-                            Outlook Enterprise Add-On
-                          </button>
-                        </h2>
-                        <div id="item2-b" class="accordion-collapse collapse show" data-bs-parent="#item2">
-                          <div class="accordion-body">
-                              <p>We have received a high volume of tickets regarding the Outlook Enterprise add-on and are investigating the issue.</p>
-                              <p class="timestamp"> Posted November 25th, 2021 </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="accordion" id='item-3'>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id='item3-h'>
-                          <button class="accordion-button type-2" type="button" data-bs-toggle="collapse" data-bs-target="#item3-b" data-bs-parent="#item3">
-                            <img class="update-icon" src="./assets/maintenance.png">
-                            Service Manager Server Maintenance 
-                          </button>
-                        </h2>
-                        <div id="item3-b" class="accordion-collapse collapse show" data-bs-parent="#item3">
-                          <div class="accordion-body">
-                              <p>Tonight at 8:30pm, the service manager portal will be unavailable until tomorrow morning at 7am for scheduled maintenance.</p>
-                              <p class="timestamp"> Posted December 13th, 2022 </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="accordion" id='item-4'>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id='item4-h'>
-                          <button class="accordion-button type-3" type="button" data-bs-toggle="collapse" data-bs-target="#item4-b" data-bs-parent="#item4">
-                            <img class="update-icon" src="./assets/complete.png">
-                            Outlook in Citrix Issue Resolved
-                          </button>
-                        </h2>
-                        <div id="item4-b" class="accordion-collapse collapse show" data-bs-parent="#item4">
-                          <div class="accordion-body">
-                              <p>Network Services has confirmed that Outlook should function normally in Citrix now. Please submit a ticket if you still are experiencing issues.</p>
-                              <p class="timestamp"> Posted December 5th, 2022 </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
+                <div style="display: flex;">
+                  <h1 class="display-6 text-center" style="flex-grow:100">Support Desk Updates</h1>
+                  <a href="#" class="edit-btn btn btn-outline-primary btn-sm disabled" id='cancel-btn'><img src="./assets/cancel.png" class="edit-img"></a>
+                  <a href="#" class="edit-btn btn btn-outline-primary btn-sm disabled" id='save-btn'><img src="./assets/complete.png" class="edit-img"></a>
+                  <a href='#' class="edit-btn btn btn-outline-primary btn-sm" id='edit-btn'><img src='./assets/edit.png' class="edit-img"></a>
                 </div>
-                <p></p>
-                <div class="row">
+                <div class="row" id='updates'>
+
                 </div>
               </div>
               <div name='1' id='outlook' class="border border-4 rounded">
