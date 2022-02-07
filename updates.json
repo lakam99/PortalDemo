@@ -1,0 +1,28 @@
+{
+    "updates": [
+        {
+            "type": "issue",
+            "title": "Phoenix / MyGCHR",
+            "text": "We are currently aware of an issue with MyGCHR where users are unable to access Phoenix tools.",
+            "timestamp": "Fri Nov 12 2021"
+        },
+        {
+            "type":"issue",
+            "title": "Outlook Enterprise Add-On",
+            "text": "We have received a high volume of tickets regarding the Outlook Enterprise add-on and are investigating the issue.",
+            "timestamp": "Thu Nov 25 2021"
+        },
+        {
+            "type": "maintenance",
+            "title": "Service Manager Server Maintenance",
+            "text": "Tonight at 8:30pm, the service manager portal will be unavailable until tomorrow morning at 7am for scheduled maintenance.",
+            "timestamp": "Mo Dec 13 2022"
+        },
+        {
+            "type": "resolved",
+            "title": "Outlook in Citrix Issue Resolved",
+            "text": "Network Services has confirmed that Outlook should function normally in Citrix now. Please submit a ticket if you still are experiencing issues.",
+            "timestamp": "Su Dec 5 2022"
+        }
+    ]
+}
